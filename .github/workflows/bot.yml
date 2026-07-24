@@ -20,6 +20,7 @@ jobs:
 
       - name: Установка библиотек
         run: pip install -r requirements.txt
-
-      - name: Запуск бота
-        run: python main.py
+- name: Запуск бота
+  env:
+    TOKEN: ${{ secrets.TOKEN }}
+  run: python main.py
