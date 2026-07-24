@@ -3,6 +3,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from handlers import stock, add
 
+
 TOKEN = os.getenv("TOKEN")
 
 
@@ -21,5 +22,6 @@ app = Application.builder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("stock", stock))
 app.add_handler(CommandHandler("add", add))
+
 
 app.run_polling()
