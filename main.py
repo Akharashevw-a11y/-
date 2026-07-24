@@ -1,9 +1,9 @@
+import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
-TOKEN = import os
-
 TOKEN = os.getenv("TOKEN")
+
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
@@ -13,11 +13,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "/stock — посмотреть склад"
     )
 
+
 async def stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "📦 Склад пока пуст.\n"
         "Скоро здесь появится список шин."
     )
+
 
 app = Application.builder().token(TOKEN).build()
 
