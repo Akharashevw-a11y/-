@@ -1,4 +1,4 @@
-import os
+impor# ВЕРСИЯ 2
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 from handlers import stock, add
