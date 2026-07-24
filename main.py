@@ -14,7 +14,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Команды:\n"
         "/stock — посмотреть склад\n"
         "/add — добавить шины"
-    )
+    
 
 
 app = Application.builder().token(TOKEN).build()
